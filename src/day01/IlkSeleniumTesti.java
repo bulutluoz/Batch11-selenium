@@ -15,6 +15,7 @@ public class IlkSeleniumTesti {
         driver.navigate().refresh();
         driver.navigate().to("https://www.google.com/");
         driver.navigate().back();
+        driver.navigate().forward();
         //driver.close(); // sadece calisilan browser'i kapatir
         driver.quit(); // acik olan tum browser'lari kapatir
 
