@@ -30,15 +30,19 @@ public class HomeWorkGoogleSearchTest {
         WebElement searchBox=driver.findElement(By.name("q"));
         String arananKelime = "city bike";
         searchBox.sendKeys(arananKelime+Keys.ENTER);
+        //searchBox.submit();  bu kodda calisir, Keys.ENTER veya submit() sizin tercihinze kalmis
 
         //		c. Google'da görüntülenen ilgili sonuçların sayısını yazdırın
         WebElement sonucSayisi=driver.findElement(By.id("result-stats"));
-        System.out.println("city bike icin sonuc sayisi \"" +sonucSayisi.getText()+"\"");
+
+        System.out.println(arananKelime + " icin sonuc sayisi \"" +sonucSayisi.getText() +"\"");
 
         //		d. “Shopping” e tıklayın.
 
-        WebElement alisverisLinki=driver.findElement(By.linkText("Alışveriş"));
-        alisverisLinki.click();
+        //WebElement alisverisLinki = driver.findElement(By.linkText("Alışveriş"));
+        //alisverisLinki.click();
+
+        driver.findElement(By.linkText("Alışveriş")).click();
         //		e. Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
 
         driver.findElement(By.id("srpresultimg_15970114592076028408_1_0")).click();

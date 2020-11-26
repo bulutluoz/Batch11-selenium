@@ -85,6 +85,13 @@ public class LocatorsIntro {
         List<WebElement> linkListesi = driver.findElements(By.tagName("a"));
         System.out.println("sayfada " + linkListesi.size() + " tane link var");
 
+        // 4. linkleri yazdiralim
+        System.out.println("sayfadaki linkler");
+        for (WebElement w : linkListesi
+             ) {
+            System.out.println(w.getText());
+        }
+
         driver.close();
     }
 
